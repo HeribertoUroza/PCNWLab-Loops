@@ -5,6 +5,17 @@
     @desc - takes all engative numbers and makes positive
     @example - removeNegatives([-3,-2,1,2,3,-4]); // [3,2,1,2,3,4]
 */
+const removeNegatives = (arr) => {
+    const copyArr = [...arr];
+    for (let i = 0; i < copyArr.length; i++) {
+        if (copyArr[i] < 0){
+            copyArr[i] *= -1
+        } 
+    } 
+    return copyArr;           //Make sure RETURN is outside the for LOOP
+}
+console.log(removeNegatives([-3, -2, 1, 2, 3, -4]));
+
 
 /*
     @func findVal
@@ -20,6 +31,18 @@
         findVal([1,2,3,4], 9); // -1
 */
 
+// const findVal = (arr, val) => {
+//     const copyArr = [...arr];
+//     for (let i = 0; i < arr.length; i++){
+        
+//         }
+//     }
+// }
+
+// console.log(findVal([1, 2, 3, 4], 1)); // 0
+// console.log(findVal([1, 2, 3, 4], 4)); // 3
+// console.log(findVal([1, 2, 3, 4], 9)); // -1findVal())
+
 /*
     @func removeOdds
     @param {array} arr
@@ -32,6 +55,20 @@
         removeOdds([1,"2",3,4]); // [4]
 */
 
+const removeOdds = (arr) => { 
+    const emptArr = [];
+    for (let i = 0 ; i < arr.length ; i++) {
+
+        if (arr[i] % 2 === 0  && typeof(arr[i]) === "number"){
+           emptArr.push(arr[i]); 
+
+        }
+    }
+    return emptArr 
+}
+console.log(removeOdds([1, 2, 3, 4])); // [2,4]
+console.log(removeOdds([1, "2", 3, 4])); // [4]
+
 /*
     @func addSquares
     @param {array} arr
@@ -40,6 +77,17 @@
     @example - 
         addSquares([1,2,3,4); // [1,2,3,4,1,4,9,16]
 */
+const addSquares = (arr) => { 
+    const copyArr = [...arr]
+    const emptyArr = []
+
+    for (let i = 0; i < arr.length; i++) {
+        emptyArr[i] = copyArr[i] ** 2
+
+    } return copyArr.push(emptyArr)
+} 
+console.log(addSquares([1, 2, 3, 4])); // [1,2,3,4,1,4,9,16]
+
 
 /*
     @func doubleify
